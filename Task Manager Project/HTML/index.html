@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<header>
+    <h1>TaskBunny.Com</h1>
+</header>
+<body>
+
+    <div class="container">
+        <div class="task-form">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <label for="task-title"><h3>Task Title:</h3></label>
+                <input type="text" id="task-title" required>
+
+                <label for="task-description">Task Description:</label>
+                <input type="text" id="task-description" required>
+
+                <label for="assigned-to">Assigned To:</label>
+                <input type="text" id="assigned-to" required>
+
+                <label for="details">Details:</label>
+                <input type="text" id="details" required>
+
+                <label>Priority:</label>
+                <div class="priority-radio">
+                    <label for="priority-high">High</label>
+                    <input type="radio" name="priority" value="High" id="priority-high">
+                    <label for="priority-medium">Medium</label>
+                    <input type="radio" name="priority" value="Medium" id="priority-medium">
+                    <label for="priority-low">Low</label>
+                    <input type="radio" name="priority" value="Low" id="priority-low">
+                </div>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+        
+        <div class="task-form search" id="search-form">
+            <h2>Search Tasks</h2>
+            <form id="search-task-form">
+                <label for="search-input">Search Tasks:</label>
+                <input type="text" id="search-input">
+                <button type="button" id="search-button">Search</button>
+                <button type="button" id="show-all-button">Show All</button>
+            </form>
+        </div>
+        <div class="edit-form" id="edit-form">
+            <h2>Edit Task</h2>
+            <form id="edit-task-form">
+                <input type="hidden" id="edit-task-id">
+                <label for="edit-task-title">Task Title:</label>
+                <input type="text" id="edit-task-title" required>
+        
+                <label for="edit-task-description">Task Description:</label>
+                <input type="text" id="edit-task-description" required>
+        
+                <label for="edit-assigned-to">Assigned To:</label>
+                <input type="text" id="edit-assigned-to" required>
+        
+                <label for="edit-details">Details:</label>
+                <input type="text" id="edit-details" required>
+
+                <label for="edit-priority">Priority:</label>
+                <div class="priority-radio">
+                    <label for="edit-priority-high">High</label>
+                    <input type="radio" name="edit-priority" value="High" id="edit-priority-high">
+                    <label for="edit-priority-medium">Medium</label>
+                    <input type="radio" name="edit-priority" value="Medium" id="edit-priority-medium">
+                    <label for="edit-priority-low">Low</label>
+                    <input type="radio" name="edit-priority" value="Low" id="edit-priority-low">
+                </div>
+        
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+    <div class="task-list" id="task-list">
+        
+    <h3>Tasks</h3>
+        <!-- Task items will be added here dynamically -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="../JS/script.js"></script>
+</body>
+<footer>
+    <p>Created by Veeraswami Nandagopal Siddharth & Tanvi Sutariya</p>
+</footer>
+</html>
